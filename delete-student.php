@@ -4,8 +4,7 @@ use Alura\Pdo\Domain\Model\Student;
 
 require_once 'vendor/autoload.php';
 
-$database = __DIR__ . '/database.sqlite';
-$pdo = new PDO('sqlite:' . $database);
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 $preparedStatement = $pdo->prepare('DELETE FROM students WHERE id = ?;');
 $preparedStatement->bindValue(1, 2, PDO::PARAM_INT);

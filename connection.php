@@ -1,7 +1,6 @@
 <?php
 
-$database = __DIR__ . '/database.sqlite';
-$pdo = new PDO('sqlite:' . $database);
+$pdo = \Alura\Pdo\Infrastructure\Persistence\ConnectionCreator::createConnection();
 
 echo 'Connected';
 
