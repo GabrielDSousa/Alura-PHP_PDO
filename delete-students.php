@@ -9,5 +9,9 @@ require_once 'vendor/autoload.php';
 $connection = ConnectionCreator::createConnection();
 $studentRepository = new PdoStudentRepository($connection);
 $students = $studentRepository->allStudents();
+foreach ($students as $student){
+    $result = $studentRepository->remove($student);
+}
 
-var_dump($students);
+var_dump($result);
+

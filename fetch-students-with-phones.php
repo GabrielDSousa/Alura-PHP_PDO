@@ -8,6 +8,6 @@ require_once 'vendor/autoload.php';
 
 $connection = ConnectionCreator::createConnection();
 $studentRepository = new PdoStudentRepository($connection);
-$students = $studentRepository->allStudents();
+$students = $studentRepository->studentsWithPhones();
 
 var_dump($students);
