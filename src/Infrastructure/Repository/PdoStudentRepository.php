@@ -47,9 +47,14 @@ class PdoStudentRepository implements StudentRepository
 
     public function remove(Student $student): bool
     {
+        $preparedStatement = $this->connection->prepare('DELETE FROM phones WHERE student_id = ?;');
+        $preparedStatement->bindValue(1, $student->id(), PDO::PARAM_INT);
+        $preparedStatement->execute();
+
         $preparedStatement = $this->connection->prepare('DELETE FROM students WHERE id = ?;');
         $preparedStatement->bindValue(1, $student->id(), PDO::PARAM_INT);
         return $preparedStatement->execute();
+
     }
 
     private function insert(Student $student)
