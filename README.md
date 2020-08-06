@@ -1,7 +1,3 @@
-# PHP_PDO
-Trabalhando com bancos de dados
-
-
 # PHP and PDO
 [Working with database](https://cursos.alura.com.br/course/php-pdo-banco-de-dados)
 
@@ -18,7 +14,7 @@ Do this trainning in database and:
 ## Installation
 
 Use the package manager to install php.
-On Windows I'm using [Chocolatey](https://chocolatey.org/)
+On Windows, I'm using [Chocolatey](https://chocolatey.org/)
 ```bash
 choco install php
 ```
@@ -31,6 +27,25 @@ Open a terminal on the folder where is the code and type:
 
 ```bash
 composer dumpautoload
+```
+```bash
+php creating-tables.php
+php filling-tables.php
+```
+
+To see the students added
+```bash
+php fetch-student.php
+```
+
+To see the students added with phones
+```bash
+php fetch-students-with-phones.php
+```
+
+To delete all students
+```bash
+php delete-students.php
 ```
 
 ## License
