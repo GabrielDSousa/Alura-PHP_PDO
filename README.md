@@ -49,4 +49,5 @@ php delete-students.php
 ```
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/GabrielDSousa/PHP_PDO/blob/master/LICENSE.md)
+
